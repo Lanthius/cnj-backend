@@ -1,6 +1,6 @@
 package edu.hm.cs.cnj.cnjbackend.info;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class InfoController {
 
-    @Value("${greeting.message}")
-    private String message;
+    @Autowired
+    private InfoProperties infoProperties;
 
     @RequestMapping("/info")
     public Info greeting() {
         Info result = new Info();
-        result.setMessage(message);
+        result.setMessage(infoProperties.getMessage());
         return result;
     }
 
