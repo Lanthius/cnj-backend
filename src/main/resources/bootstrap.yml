@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hm-hanway-cnj
+---
+spring:
+  profiles: dev, cloud
+  cloud:
+    config:
+      uri: https://hm-hanway-config-server.cfapps.io
