@@ -31,6 +31,10 @@ public class DataInitializer {
         new GregorianCalendar(2018, Calendar.AUGUST, 2, 9, 30, 00).getTime());
         veranstaltungen.fuegeTeilnahmeHinzu(v2, "Thor", 0);
         veranstaltungen.fuegeTeilnahmeHinzu(v2, "Superman", 0);
+
+        // example to set a few Teilnahmer to ABSAGE
+        veranstaltungen.sageOffeneTeilnahmenAbBis(
+                new GregorianCalendar(2017, Calendar.DECEMBER, 31, 23, 59, 59).getTime());
     }
 
 }

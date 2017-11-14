@@ -55,4 +55,8 @@ public class Veranstaltung {
         teilnahme.setVeranstaltung(this);
     }
 
+    public Set<Teilnahme> getTeilnahme(){
+        return einladungen;
+    }
+
 }

@@ -47,4 +47,12 @@ public class Teilnahme {
         this.veranstaltung = veranstaltung;
     }
 
+    public void setStatus(TeilnahmeStatus status){
+        this.status = status;
+    }
+
+    public TeilnahmeStatus getStatus(){
+        return this.status;
+    }
+
 }
