@@ -59,4 +59,39 @@ public class Veranstaltung {
         return einladungen;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitel() {
+        return titel;
+    }
+
+    public void setTitel(String titel) {
+        this.titel = titel;
+    }
+
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
+    }
+
+    public Date getBeginn() {
+        return beginn;
+    }
+
+    public void setBeginn(Date beginn) {
+        this.beginn = beginn;
+    }
+
+    public Set<Teilnahme> getEinladungen() {
+        return einladungen;
+    }
+
+    public void setEinladungen(Set<Teilnahme> einladungen) {
+        this.einladungen = einladungen;
+    }
 }
