@@ -5,3 +5,4 @@ applications:
   timeout: 180
   instances: 1
   memory: 800M
+  buildpack: java_buildpack
