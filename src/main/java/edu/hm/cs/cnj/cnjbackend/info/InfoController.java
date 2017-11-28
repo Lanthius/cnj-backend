@@ -30,5 +30,4 @@ public class InfoController {
         result.setMessage(infoProperties.getMessage());
         return result;
     }
-
 }
