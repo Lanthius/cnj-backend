@@ -18,6 +18,7 @@ public class VeranstaltungResourceController {
     @Autowired
     VeranstaltungService service;
 
+    
     @GetMapping
     ResponseEntity<Collection<VeranstaltungDto>> findeVeranstaltungen(
             @RequestParam(name = "allEvents", defaultValue = "false") boolean
