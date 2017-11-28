@@ -1,5 +1,7 @@
 applications:
 - name: hm-hanway-cnj
-  path: target/cnj-backend-0.0.1-SNAPSHOT.jar
+  domain: mybluemix.net
+  host: hm-cnj
+  timeout: 180
   instances: 1
   memory: 800M
