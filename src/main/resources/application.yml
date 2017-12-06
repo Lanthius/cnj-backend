@@ -2,7 +2,7 @@ server:
   port: 8000
 spring:
   datasource:
-    url: ${vcap.services.cleardb.credentials.jdbcUrl}
+    url: ${cloud.services.cleardb.credentials.jdbcUrl}
     username: ${cloud.services.cleardb.credentials.username}
     password: ${cloud.services.cleardb.credentials.password}
   jpa:
