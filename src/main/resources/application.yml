@@ -1,9 +1,13 @@
 server:
   port: 8000
 spring:
-  h2:
-    console:
-      enabled: true
+  datasource:
+    url: ${vcap.services.cleardb.credentials.jdbcUrl}/veranstaltungen
+    username: ${vcap.services.cleardb.credentials.username}
+    password: ${vcap.services.cleardb.credentials.password}
+  jpa:
+    hibernate:
+      ddl-auto: create
 cnj:
   info:
     message: Server verwendet Konfiguration aus Codebase!
