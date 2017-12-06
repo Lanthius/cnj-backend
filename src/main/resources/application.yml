@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     url: ${vcap.services.cleardb.credentials.jdbcUrl}
-    username: ${vcap.services.cleardb.credentials.username}
-    password: ${vcap.services.cleardb.credentials.password}
+    username: ${cloud.services.cleardb.credentials.username}
+    password: ${cloud.services.cleardb.credentials.password}
   jpa:
     hibernate:
       ddl-auto: create
