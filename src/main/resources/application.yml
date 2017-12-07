@@ -2,9 +2,9 @@ server:
   port: 8000
 spring:
   datasource:
-    url: ${cloud.services.cleardb.connection.jdbcUrl}
-    username: ${cloud.services.cleardb.connection.username}
-    password: ${cloud.services.cleardb.connection.password}
+    url: ${vcap.services.mysql.connection.jdbcUrl}
+    username: ${cloud.services.mysql.connection.username}
+    password: ${cloud.services.mysql.connection.password}
   jpa:
     hibernate:
       ddl-auto: create

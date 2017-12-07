@@ -26,4 +26,15 @@ public class CnjBackendApplication {
 				.build();
 	}
 
+	@Configuration
+	@Profile("cloud")
+	public static class DataSourceConfig extends AbstractCloudConfig {
+
+		@Bean
+		DataSource reservationsPostgreSqlDb() {
+			return connectionFactory().dataSource("postgresql-db");
+		}
+	}
+
+
 }
