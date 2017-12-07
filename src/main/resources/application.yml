@@ -1,10 +1,10 @@
 server:
   port: 8000
 spring:
-#  datasource:
-#    url: ${cloud.services.cleardb.credentials.jdbcUrl}
-#    username: ${cloud.services.cleardb.credentials.username}
-#    password: ${cloud.services.cleardb.credentials.password}
+  datasource:
+    url: ${cloud.services.cleardb.connection.jdbcUrl}
+    username: ${cloud.services.cleardb.connection.username}
+    password: ${cloud.services.cleardb.connection.password}
   jpa:
     hibernate:
       ddl-auto: create
