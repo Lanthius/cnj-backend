@@ -2,10 +2,7 @@ package edu.hm.cs.cnj.cnjbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cloud.Cloud;
-import org.springframework.cloud.CloudFactory;
+import org.springframework.cloud.config.java.AbstractCloudConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -35,31 +32,14 @@ public class CnjBackendApplication {
 				.build();
 	}
 
-	@Configuration
-	@Profile("default") // or "!cloud"
-	public class LocalDataSourceConfiguration {
-
-		@Bean
-		@ConfigurationProperties("spring.datasource")
-		public DataSource dataSource() {
-			return DataSourceBuilder.create().build();
-		}
-
-	}
 
 	@Configuration
 	@Profile("cloud")
-	public class DataSourceConfiguration {
+	public static class DataSourceConfig extends AbstractCloudConfig {
 
 		@Bean
-		public Cloud cloud() {
-			return new CloudFactory().getCloud();
-		}
-
-		@Bean
-		@ConfigurationProperties("spring.datasource")
-		public DataSource dataSource() {
-			return cloud().getSingletonServiceConnector(DataSource.class, null);
+		DataSource reservationsPostgreSqlDb() {
+			return connectionFactory().dataSource("cleardb");
 		}
 
 	}
