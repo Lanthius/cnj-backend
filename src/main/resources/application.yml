@@ -2,9 +2,9 @@ server:
   port: 8000
 spring:
   datasource:
-    url: ${vcap.services.mysql.connection.jdbcUrl}
-    username: ${cloud.services.mysql.connection.username}
-    password: ${cloud.services.mysql.connection.password}
+    url: jdbc:mysql://us-cdbr-sl-dfw-01.cleardb.net/ibmx_6ed39368204a928?user=b0711bc68ade87&password=dbaebf34
+    username: b0711bc68ade87
+    password: dbaebf34
   jpa:
     hibernate:
       ddl-auto: create
