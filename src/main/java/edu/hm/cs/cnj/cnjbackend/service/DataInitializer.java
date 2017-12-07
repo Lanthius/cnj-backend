@@ -26,6 +26,6 @@ public class DataInitializer {
 		v2.setTitel("Workshop aufrechtes Sitzen");
 		v2.setBeschreibung("Zertifizierungsworkshop für das Sitzen auf St\u00FChlen mit mindestens drei Beinen.");
 		v2.setBeginn(new GregorianCalendar(2018, Calendar.AUGUST, 2, 9, 30, 00).getTime());		
-		veranstaltungen.erzeugeVeranstaltung(v2);		
+		veranstaltungen.erzeugeVeranstaltung(v2);
 	}
 }
